@@ -1,0 +1,43 @@
+## Working with Environment Variables
+
+python support following library and function to work on environment variable
+
+ os package
+ os.environ attributes
+ os.getenv
+ 
+ BY importing os package we are able to access a lot of operating system level attributes and functions
+ 
+ -/bin/running
+ 
+ ```
+   #!/usr/bin/env python3.7
+
+  import os
+
+  stage = os.getenv("STAGE", "dev").upper()
+
+  output = f"We're running in {stage}"
+
+  if stage.startswith("PROD"):
+      output = "DANGER!!! - " + output
+
+  print(output)
+  
+ ```
+ 
+ give the executable permission to the file 
+ 
+ ```
+ chmod u+x bin/running
+ ```
+ 
+ execute using command running
+ 
+ ```
+  $ running
+  We're running in DEV
+  $ STAGE=prod running
+  DANGER!!! - We're running in PROD
+
+ ```
