@@ -6,6 +6,7 @@
    distribution for development.
 
 ### Required Software Packages, Tools, and Files
+  ```
   git
   wget
   which
@@ -13,6 +14,27 @@
   lsof
   text editor of your choice
   python 3.6.5
+```
 
+### Installing Packages
 
+```
+  sudo su -
+  $ yum update
+  $ yum groupinstall -y "development tools"
+  $ yum install -y \
+    lsof \
+    wget \
+    vim-enhanced \
+    words \
+    which
+  $ exit
+```
+
+### Configuring Git
+
+```
+  $ git config --global user.name "Your Name"
+  $ git config --global user.email "your_email@example.com"
+```
 
